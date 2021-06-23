@@ -1,0 +1,10 @@
+parameters:
+  labels:
+    app: ${name}
+
+  replicas: 3
+  containers:
+    - name: ${name}
+      image: ${image}
+      ports:
+      - containerPort: ${port}

@@ -1,0 +1,7 @@
+parameters:
+  kapitan:
+    compile:
+      - input_type: copy
+        input_paths:
+          - components/deployment
+        output_path: .

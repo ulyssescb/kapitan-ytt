@@ -1,0 +1,17 @@
+#@ load("@ytt:data", "data")
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: #@ data.values.name
+  labels: #@ data.values.labels
+spec:
+  replicas: #@ data.values.replicas
+  selector:
+    matchLabels:
+      app: #@ data.values.name
+  template:
+    metadata:
+      labels: #@ data.values.labels
+    spec:
+      containers: #@ data.values.containers

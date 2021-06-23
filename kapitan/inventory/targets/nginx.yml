@@ -1,0 +1,21 @@
+classes:
+  - common
+  - components.ytt.ytt
+  - components.deployment.base
+
+parameters:
+  target_name: nginx
+
+  name: nginx
+  replicas: 3
+  port: 80
+  image: nginx
+
+  labels:
+    extraLabel: extraValue
+
+  containers:
+    - name: sidecar
+      image: sidecar
+      ports:
+      - containerPort: 15000

@@ -1,0 +1,13 @@
+parameters:
+  kapitan:
+    compile:
+      - input_type: external
+        input_paths:
+          - /usr/bin/ytt
+        output_path: .
+        args:
+          - -f
+          - \${compiled_target_dir}
+          - --output-files
+          - ./${output_path}
+
